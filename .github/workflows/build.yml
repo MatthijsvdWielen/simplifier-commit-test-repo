@@ -1,0 +1,9 @@
+# Test workflow: only runs when started by hand, never on push.
+# It exists so we can check that committing pages never touches workflow files.
+name: Test workflow
+on: workflow_dispatch
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello from the test workflow"
